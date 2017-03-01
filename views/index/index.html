@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="javascripts/angular/angular.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/angular-route/angular-route.min.js"></script>
+    <script src="javascripts/angular-animate/angular-animate.min.js"></script>
+    <script src="javascripts/routes.js"></script>
+    <script src="javascripts/controller.js"></script>
+    <script src="javascripts/services.js"></script>
+    <script src="javascripts/app.js"></script>
+
+    <!--<script src="javascripts/mui.min.js"></script>-->
+    <link rel="stylesheet" href="stylesheets/swiper.min.css">
+
+    <script src="javascripts/zepto.min.js"></script>
+    <script src="javascripts/swiper.jquery.js"></script>
+
+    <link rel="stylesheet" href="stylesheets/mui.min.css">
+    <link rel="stylesheet" href="stylesheets/my.css">
+    
+
+
+</head>
+<body ng-app="myapp">
+    <div ng-view class="view-animate">
+
+    </div>
+    <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item mui-active" href="#!/">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="#!/phone">
+            <span class="mui-icon mui-icon-phone"></span>
+            <span class="mui-tab-label">电话</span>
+        </a>
+        <a class="mui-tab-item" href="#!/todo">
+            <span class="mui-icon mui-icon-email"></span>
+            <span class="mui-tab-label">备忘录</span>
+        </a>
+        <a class="mui-tab-item" href="#!/liaotian">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">聊天</span>
+        </a>
+    </nav>
+</body>
+</html>
+

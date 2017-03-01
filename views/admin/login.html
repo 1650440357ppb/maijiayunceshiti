@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #qd-login{
+            border-radius: 8px;
+            border: 1px solid red;
+            width: 700px;
+            height: 450px;
+            background: rgba(154, 220, 234, 0.53);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        #qd-login form{
+            font-size: 50px;
+            text-align: center;
+            margin-top:100px;
+        }
+        #qd-login form input{
+            border: 1px solid #000;
+            position: relative;
+            height: 50px;
+            font-size: 24px;
+        }
+        #qd-login .qd-sub{
+            width: 210px;
+            margin-top: 40px;
+            background: #00eaff;
+            font-size: 40px;
+            height: 60px;
+        }
+        #log{
+            width: 460px;
+            font-size: 120px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body style="background: #abaab3">
+<div id="log"><p>WorkApp</p></div>
+<div class="mui-content" id="qd-login">
+    <form action="/login/check" method="post">
+        用户名  : <input type="text" name="username"><br><br>
+        密&nbsp;码   : <input type="text" name="password"><br>
+        <input type="submit" value="登陆" class="qd-sub">
+    </form>
+</div>
+</body>
+</html>

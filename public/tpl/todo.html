@@ -1,0 +1,28 @@
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">备忘录</h1>
+</header>
+<div class="mui-content">
+    <div class="mui-input-row mui-search" style="margin-top: 44px">
+        <input type="search" class="mui-input-clear" placeholder="" data-input-clear="15" data-input-search="15" ng-model="search">
+
+        <span class="mui-placeholder">
+        <span class="mui-icon mui-icon-search"></span>
+        <span>
+        </span>
+    </span>
+    </div>
+    <a href="#!/todo/add" class="addBtn">+</a>
+    <ul class="mui-table-view">
+        <div class="message" ng-show="data.length==0">
+            没有任何数据,请您添加
+        </div>
+        <li class="mui-table-view-cell" style="position: relative" ng-repeat="item in data track by item.id">
+            <a style="display: inline-block" href="#!/edit/{{item.id}}">
+                {{item.con|limitTo:20}}...
+            </a>
+            <span style="position: absolute;right:10px" ng-click="del(item.id)"> 删除</span>
+        </li>
+
+    </ul>
+
+</div>

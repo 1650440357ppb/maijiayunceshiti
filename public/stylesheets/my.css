@@ -1,0 +1,35 @@
+.addBtn{
+    width:100%;padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid #ccc;
+    display: block;
+}
+.addBtn:active{
+    background: #ccc;
+}
+.message{
+    text-align: center;
+    padding:10px 0;
+}
+
+/*index*/
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+
+.mui-bar-nav~.mui-content{
+    margin-top:45px;
+    /*border:1px solid red;*/
+    padding:0;
+}
+

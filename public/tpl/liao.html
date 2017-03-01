@@ -1,0 +1,11 @@
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">聊天</h1>
+</header>
+<ul class="history" style="width:100%;height:200px;border:1px solid red;overflow: auto;    margin-top: 45px;">
+    <li ng-repeat="item in message" id="liao-right">
+        <span id="liao-self">{{item.self}}</span>
+        <span id="liao-text">{{item.text}}</span>
+    </li>
+</ul>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<input type="button" value="发送" ng-click="click()">

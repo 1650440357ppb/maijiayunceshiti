@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../public/javascripts/angular1/angular.js"></script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="ctrl">
+    <div menu></div>
+</div>
+<hr>
+<div menu></div>
+<hr>
+<div menu></div>
+</body>
+<script>
+    angular.module("myapp",[])
+            .directive("menu",function(){
+                return{
+                    restrict:"A",
+                    templateUrl:"demo.html",
+                    transclude:true,
+                    scope:{},
+                    link:function($scope,b,c){
+                        $scope.data=[
+                            {
+                                name:"111",
+                                son:[
+                                    {name:"1-111"},
+                                    {name:"1-111"},
+                                    {name:"1-111"},
+                                    {name:"1-111"}
+                                ]
+                            },
+                            {
+                                name:"222",
+                                son:[
+                                    {name:"2-111"},
+                                    {name:"2-111"},
+                                    {name:"2-111"},
+                                    {name:"2-111"}
+                                ]
+                            },
+                            {
+                                name:"333",
+                                son:[
+                                    {name:"3-111"},
+                                    {name:"3-111"},
+                                    {name:"3-111"},
+                                    {name:"3-111"}
+                                ]
+                            },
+                            {
+                                name:"444",
+                                son:[
+                                    {name:"4-111"},
+                                    {name:"4-111"},
+                                    {name:"4-111"},
+                                    {name:"4-111"}
+                                ]
+                            }
+
+                        ];
+                        $scope.a=0;
+                        $scope.change=function(id){
+                            $scope.a=id;
+                        }
+                    }
+
+                }
+            })
+            .controller("ctrl",function(){
+
+            })
+</script>
+</html>

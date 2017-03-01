@@ -1,0 +1,32 @@
+<style>
+    .view-animate {
+        transition:left ease 1s;
+    }
+    .view-animate.ng-enter, .view-animate.ng-leave {
+        width:100%;
+        position:absolute;
+        left:0;
+    }
+    .view-animate.ng-enter {
+        left: 100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+        left: 0;
+    }
+    .view-animate.ng-leave.ng-leave-active {
+        left:-100%;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-pull-left" ng-click="save()">
+        保存
+    </a>
+    <a class="mui-pull-right" ng-click="close()">
+        关闭
+    </a>
+</header>
+<div class="mui-content">
+    <div class="todocon" contenteditable="true" style="width:100%;height:200px;border:1px solid #000;box-sizing: border-box">
+        {{current.con}}
+    </div>
+</div>

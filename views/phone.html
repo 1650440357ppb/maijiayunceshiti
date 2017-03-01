@@ -1,0 +1,72 @@
+doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="javascripts/angular/angular.min.js"></script>
+    <script src="javascripts/phone.js"></script>
+    <link rel="stylesheet" href="stylesheets/mui.min.css">
+    <style>
+        .mui-search .mui-input-clear{
+            margin-bottom:0;
+        }
+        .mui-icon-search{
+            line-height: 35px;
+        }
+        .en{
+            margin-bottom: 6px;
+        }
+
+    </style>
+    <script>
+        window.onload = function () {
+            var placeholder = document.querySelector(".mui-placeholder");
+            var input = document.querySelector(".mui-input-clear");
+            placeholder.onclick = function () {
+                this.style.width = "20px";
+                input.focus();
+            }
+            input.onblur = function () {
+                placeholder.style.width = "100%";
+            }
+        }
+    </script>
+</head>
+
+<body ng-app="myapp">
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">通讯录</h1>
+</header>
+<div ng-controller="phone">
+    <div class="mui-input-row mui-search" style="margin-top: 25px">
+        <input type="search" class="mui-input-clear" placeholder="" data-input-clear="15" data-input-search="15" ng-model="search">
+
+        <span class="mui-placeholder">
+        <span class="mui-icon mui-icon-search"></span>
+        <span>
+        </span>
+    </span>
+    </div>
+
+    <ul class="mui-table-view">
+        <div ng-show="type!==''" ng-click="show()">显示全部</div>
+        <li class="mui-table-view-cell" ng-repeat="item in data | filter:{en:type} |filter:{en:search} track by $index ">
+            <div>
+                {{item.en}}
+            </div>
+            <a class="" href="{{aa.phone}}" ng-repeat="aa in item track by $index">
+                <span>{{aa.name}}</span>
+                <span>{{aa.phone}}</span>
+            </a>
+        </li>
+
+    </ul>
+    <div class="en" style="position: fixed;right:10px;width:20px;z-index:999;top:86px">
+        <div ng-repeat="item in data" ng-click="filter(item.en)" class="en">
+            {{item.en}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

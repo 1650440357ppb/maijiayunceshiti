@@ -1,0 +1,63 @@
+<style>
+    .mui-bar-nav{
+        background:#4AA1D6;
+    }
+    .swiper-container .swiper-wrapper .swiper-slide{
+        width:100%;height:13rem;
+    }
+    .swiper-container .swiper-wrapper .swiper-slide .swiper-zoom-container{
+        width:100%;height:100%;
+    }
+    .swiper-container .swiper-wrapper .swiper-slide .swiper-zoom-container img{
+        width:100rem;height:100%;
+        object-fit:cover;
+    }
+    .mui-table-view{
+        margin-top:0.4rem;
+    }
+</style>
+
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">workApp</h1>
+</header>
+
+<div class="mui-content" ng-controller="lunbo">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+                <div class="swiper-zoom-container">
+                    <img src="images/ban1.jpg" alt="" id="img"/>
+                </div>
+            </div>
+            <div class="swiper-slide" data-hash="slide1">
+                <div class="swiper-zoom-container">
+                    <img src="images/ban2.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-slide" data-hash="slide1">
+                <div class="swiper-zoom-container">
+                    <img src="images/ban3.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-slide" data-hash="slide1">
+                <div class="swiper-zoom-container">
+                    <img src="images/ban5.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div> <!--轮播小点-->
+    </div>
+
+
+
+
+
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell" ng-repeat="item in data">
+            <a href="#!/show/{{item.id}}" class="mui-navigate-right">
+                {{item.title}}
+            </a>
+        </li>
+    </ul>
+</div>

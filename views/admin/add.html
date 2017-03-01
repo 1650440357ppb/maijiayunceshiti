@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/admin-add.css">
+</head>
+<body>
+<div class="container">
+    <form role="form" action="/admin/addInfo" method="post">
+        <div class="form-group">
+            <label for="username">姓名</label>
+            <input type="text" class="form-control" id="username" placeholder="username" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">密码</label><input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
+        </div>
+        <div class="form-group">
+            <label for="phone">电话号码</label>
+            <input type="text" class="form-control" id="phone" placeholder="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="text" class="form-control" id="email" placeholder="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="email">首字母</label>
+            <input type="text" class="form-control" id="en" placeholder="email" name="en" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-default">添加</button>
+    </form>
+</div>
+</body>
+</html>
+<script>
+
+</script>
